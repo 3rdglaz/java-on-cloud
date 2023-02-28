@@ -5,4 +5,4 @@ COPY build/libs/*.jar /opt/app/
 RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 
-CMD java -jar /opt/app/application.jar
+CMD ["java", "-jar", "/opt/app/application.jar"]
