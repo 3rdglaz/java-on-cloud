@@ -23,7 +23,11 @@ jobs:
 
     steps:
     - name: Super-Linter
-      uses: github/super-linter@v4.10.1
+      uses: github/super-linter/slim@v4
+      env:
+        VALIDATE_ALL_CODEBASE: false
+        DEFAULT_BRANCH: master
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
     - uses: actions/checkout@v3
     
